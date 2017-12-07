@@ -1,0 +1,8 @@
+<ul class="events">
+  <li *ngFor="let event of events"
+      routerLink="/comments/{{event.id}}"
+      [class.selected]="event === selectedEvent"
+      (click)="onSelect(event)">
+    {{event.title}}
+  </li>
+</ul>

@@ -1,0 +1,6 @@
+<div style="float: left">
+  <app-time-line [comments]="comments"></app-time-line>
+</div>
+<div>
+  <app-post-message (postAdded)="refreshComments()" [commentsNumber]="comments.length" [event]="event"></app-post-message>
+</div>

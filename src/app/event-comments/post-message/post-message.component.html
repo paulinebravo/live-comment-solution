@@ -1,0 +1,9 @@
+<div>
+  <h1 *ngIf="event">{{event.title}}</h1>
+  <h2 *ngIf="event">{{event.date}}</h2>
+  <h3 *ngIf="event">{{event.category}}</h3>
+  <form class="editor-form">
+    <quill-editor [(ngModel)]="comment" name="comment"></quill-editor>
+    <button mat-button value="Post Message" (click)="post()">POST</button>
+  </form>
+</div>
