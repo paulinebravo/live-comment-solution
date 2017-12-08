@@ -3,5 +3,7 @@ export class Event {
         public id: number,
         public title: string,
         public date: number,
+        public hour: number,
+        public min: number,
       ) {  }
   }

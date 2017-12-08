@@ -10,7 +10,7 @@
     <textarea matInput placeholder="Event title" [(ngModel)]="eventTitle" name="eventTitle"></textarea>
   </mat-form-field>
   <mat-form-field style="width: 40%">
-    <input matInput [matDatepicker]="picker" [(ngModel)]="eventDate" name="eventDate" placeholder="Choose a date">
+    <input matInput [matDatepicker]="picker" [(ngModel)]="eventDate" name="eventDate" placeholder="Date">
     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
@@ -18,7 +18,7 @@
     <input matInput type="number" max="24" min="0" #hour maxlength="2" placeholder="hour">
   </mat-form-field>
   <mat-form-field style="width: 20%" class="example-full-width">
-    <input matInput type="number" max="60" min="0" #minutes maxlength="2" placeholder="minutes">
+    <input matInput type="number" max="60" min="0" #minutes maxlength="2" placeholder="min">
   </mat-form-field>
   <button mat-button value="Add Item" type="submit">ADD AN EVENT</button>
 </form>

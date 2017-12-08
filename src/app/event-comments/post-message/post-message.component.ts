@@ -2,18 +2,18 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { EventService } from '../../service/event.service';
 
 @Component({
-  selector:'app-post-message',
-  templateUrl:'./post-message.component.html',
-  styleUrls:[ './post-message.component.css' ]
+  selector: 'app-post-message',
+  templateUrl: './post-message.component.html',
+  styleUrls: [ './post-message.component.css' ]
 })
 export class PostMessageComponent implements OnInit {
   @Output() postAdded = new EventEmitter();
 
   @Input() event;
-  @Input() commentsNumber:number;
+  @Input() commentsNumber: number;
   comment;
 
-  constructor(private eventService:EventService) { }
+  constructor(private eventService: EventService) { }
 
   ngOnInit() {
   }

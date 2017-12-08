@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./time-line.component.css']
 })
 export class TimeLineComponent implements OnInit {
-  @Input() comments:any[] =[];
+  @Input() comments: any[] = [];
 
   constructor() { }
 

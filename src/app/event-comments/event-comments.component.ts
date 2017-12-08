@@ -3,21 +3,21 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { EventService } from '../service/event.service';
 
 @Component({
-  selector:'app-event-comments',
-  templateUrl:'./event-comments.component.html',
-  styleUrls:[ './event-comments.component.css' ]
+  selector: 'app-event-comments',
+  templateUrl: './event-comments.component.html',
+  styleUrls: [ './event-comments.component.css' ]
 })
 export class EventCommentsComponent implements OnInit, OnDestroy {
 
 
   event;
-  comments:any[] = [];
-  id:number;
-  private sub:any;
+  comments: any[] = [];
+  id: number;
+  private sub: any;
 
-  constructor(private route:ActivatedRoute,
-              private eventService:EventService,
-              private router:Router) { }
+  constructor(private route: ActivatedRoute,
+              private eventService: EventService,
+              private router: Router) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
