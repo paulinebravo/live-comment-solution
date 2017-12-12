@@ -3,6 +3,8 @@
       routerLink="/comments/{{event.id}}"
       [class.selected]="event === selectedEvent"
       (click)="onSelect(event)">
+    {{event.category}}  
     {{event.title}}
+    {{event.date | date: 'dd/MM/yyyy'}}
   </li>
 </ul>

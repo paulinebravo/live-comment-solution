@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { EVENTS } from '../../mock-event';
 import { EventService } from '../../service/event.service';
 
 @Component({
