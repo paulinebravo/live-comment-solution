@@ -15,10 +15,10 @@
     <mat-datepicker #picker></mat-datepicker>
   </mat-form-field>
   <mat-form-field style="width: 20%" class="example-full-width">
-    <input matInput type="number" max="24" min="0" #hour maxlength="2" placeholder="hour">
+    <input matInput type="number" max="24" min="0" #hour maxlength="2" placeholder="hour"[(ngModel)]="eventHour" name="eventHour">
   </mat-form-field>
   <mat-form-field style="width: 20%" class="example-full-width">
-    <input matInput type="number" max="60" min="0" #minutes maxlength="2" placeholder="min">
+    <input matInput type="number" max="60" min="0" #minutes maxlength="2" placeholder="min"[(ngModel)]="eventMin" name="eventMin">
   </mat-form-field>
   <button mat-button value="Add Item" type="submit">ADD AN EVENT</button>
 </form>

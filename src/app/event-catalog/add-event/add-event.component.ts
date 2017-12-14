@@ -13,8 +13,10 @@ export class AddEventComponent implements OnInit {
   private category;
   private eventTitle;
   private eventDate;
+  private eventHour;
+  private eventMin;
 
-  constructor(private eventService:EventService) {
+  constructor(private eventService: EventService) {
 
   }
 
@@ -30,7 +32,9 @@ export class AddEventComponent implements OnInit {
       {id: this.eventsNumber},
       this.category ? { category: this.category } : null,
       this.eventTitle ? { title: this.eventTitle } : null,
-      this.eventDate ? { date: this.eventDate } : null
+      this.eventDate ? { date: this.eventDate } : null,
+      this.eventHour ? { hour: this.eventHour } : null,
+      this.eventMin ? { min: this.eventMin } : null,
     )
     console.log('event', newEvent);
     this.eventService.addEvent(newEvent).subscribe(response => this.eventAdded.emit(response));
