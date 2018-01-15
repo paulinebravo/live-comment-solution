@@ -19,6 +19,8 @@ import { EventCommentsComponent } from './event-comments/event-comments.componen
 import { AppRoutingModule } from './app-routing.module';
 
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,8 +29,10 @@ import { AppRoutingModule } from './app-routing.module';
     PostMessageComponent,
     TimeLineComponent,
     EventCatalogComponent,
-    EventCommentsComponent
+    EventCommentsComponent,
+
   ],
+
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -38,7 +42,10 @@ import { AppRoutingModule } from './app-routing.module';
     MaterialModule,
     ReactiveFormsModule,
     QuillModule,
-    HttpClientModule
+    HttpClientModule,
+
+
+
   ],
 
   exports: [

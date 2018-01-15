@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { EventService } from '../service/event.service';
+import * as Moment from 'moment';
 
 @Component({
   selector: 'app-event-comments',
@@ -12,12 +13,14 @@ export class EventCommentsComponent implements OnInit, OnDestroy {
 
   event;
   comments: any[] = [];
+  currentDate: Date;
+  currentTime: number;
   id: number;
   private sub: any;
 
   constructor(private route: ActivatedRoute,
               private eventService: EventService,
-              private router: Router) { }
+              private router: Router) { this.currentDate = Moment().toDate(); }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {

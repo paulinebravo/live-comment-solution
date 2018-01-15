@@ -1,7 +1,6 @@
 <div class="informations">
   <h1 *ngIf="event">{{event.title}}</h1>
-  <h2 *ngIf="event">{{event.date | date: 'dd/MM/yyyy'}}  
-    {{event.hour}}h{{event.min}} </h2>
+  <h2 *ngIf="event">{{event.date | date: 'dd/MM/yyyy'}}  {{event.hour}}h{{event.min}} </h2>
   <h3 *ngIf="event">{{event.category}}</h3>
 </div>
   <form class="editor-form">

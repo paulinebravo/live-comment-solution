@@ -1,6 +1,7 @@
 <form class="eventsadd-form"  (ngSubmit)="addEvent($event)">
   <mat-form-field style="width: 100%">
     <mat-select placeholder="Select a category" [(ngModel)]="category" name="category">
+      
       <mat-option value="sport">Sport</mat-option>
       <mat-option value="music">Music</mat-option>
       <mat-option value="media">Media</mat-option>
@@ -8,6 +9,7 @@
   </mat-form-field>
   <mat-form-field style="width: 100%">
     <textarea matInput placeholder="Event title" [(ngModel)]="eventTitle" name="eventTitle"></textarea>
+  
   </mat-form-field>
   <mat-form-field style="width: 40%">
     <input matInput [matDatepicker]="picker" [(ngModel)]="eventDate" name="eventDate" placeholder="Date">
@@ -16,10 +18,10 @@
   </mat-form-field>
   <mat-form-field style="width: 20%" class="example-full-width">
     <input matInput type="number" max="24" min="0" #hour maxlength="2" placeholder="hour"[(ngModel)]="eventHour" name="eventHour">
+    
   </mat-form-field>
   <mat-form-field style="width: 20%" class="example-full-width">
     <input matInput type="number" max="60" min="0" #minutes maxlength="2" placeholder="min"[(ngModel)]="eventMin" name="eventMin">
   </mat-form-field>
   <button mat-button value="Add Item" type="submit">ADD AN EVENT</button>
 </form>
-

@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { EventService } from '../../service/event.service';
+import * as angular from '@angular/core';
+
 
 @Component({
   selector: 'app-post-message',
@@ -12,6 +14,7 @@ export class PostMessageComponent implements OnInit {
   @Input() event;
   @Input() commentsNumber: number;
   comment;
+  currentTime: number;
 
   constructor(private eventService: EventService) { }
 
@@ -22,7 +25,8 @@ export class PostMessageComponent implements OnInit {
     const newPost = {
       id: this.commentsNumber,
       eventId: this.event.id,
-      content: this.comment
+      content: this.comment,
+      currentTime: this.currentTime,
     };
     this.eventService.addComment(newPost).subscribe(response => this.postAdded.emit(response));
   }

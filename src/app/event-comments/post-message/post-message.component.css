@@ -2,6 +2,8 @@
   width:40%;
   margin-left:55%;
   margin-top:10%;
+  overflow-y: auto;
+  
 }
 
 .informations{
